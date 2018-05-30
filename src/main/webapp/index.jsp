@@ -7,5 +7,11 @@
 <input type="submit"> <br>
 </form>
 
+<form action="getStudentById">
+Student ID:<input type="text" name="id"> <br>
+<input type="submit"><br>
+</form>
+
+
 </body>
 </html>

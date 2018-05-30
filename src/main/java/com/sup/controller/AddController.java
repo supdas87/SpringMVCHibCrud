@@ -3,14 +3,15 @@ package com.sup.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-@RestController
+@Controller
 public class AddController {
 	
-	@RequestMapping("/addVal")
+	@RequestMapping("/add")
 	public ModelAndView add(HttpServletRequest req, HttpServletResponse resp) {
 		System.out.println("Add controller....");
 		int fNo = Integer.parseInt(req.getParameter("firstNo"));
