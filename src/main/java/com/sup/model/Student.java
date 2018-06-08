@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class Student {
 	
 	@Id
-	@Column(name="studentId")
+	//@Column(name="studentId")
 	private int studentId;
 	private String studentName;
 	private String studentRoll;

@@ -25,8 +25,8 @@ public class StudentController {
 		
 	}
 	//value="/method2", method=RequestMethod.POST
-	//@RequestMapping(value="/getStudentById", method=RequestMethod.GET)
-	@RequestMapping("/getStudentById")
+	@RequestMapping(value="/getStudentById", method=RequestMethod.GET)
+	//@RequestMapping("/getStudentById")
 	public void getStudentById(ServletRequest req, ServletResponse resp) {
 		System.out.println("In controller..");
 		int id = Integer.parseInt(req.getParameter("id"));

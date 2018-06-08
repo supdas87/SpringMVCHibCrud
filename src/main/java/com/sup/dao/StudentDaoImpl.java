@@ -29,8 +29,9 @@ public class StudentDaoImpl implements StudentDao{
 		System.out.println("In DAO layer");
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa-example");
 		EntityManager em  = emf.createEntityManager();
-		Student s = em.find(Student.class, id);
-		System.out.println(s);
+		//Student s = em.find(Student.class, id);
+		em.createNativeQuery("select 1 from dual").getSingleResult();
+		//System.out.println(s);
 	}
 
 }
