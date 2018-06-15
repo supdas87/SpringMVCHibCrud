@@ -25,13 +25,21 @@ public class StudentDaoImpl implements StudentDao{
 	}
 
 	@Override
-	public void getStudentById(int id) {
+	public String getStudentById(int id) {
 		System.out.println("In DAO layer");
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa-example");
+		//System.out.println(emf);
 		EntityManager em  = emf.createEntityManager();
-		//Student s = em.find(Student.class, id);
-		em.createNativeQuery("select 1 from dual").getSingleResult();
-		//System.out.println(s);
+		Student s = em.find(Student.class, id);
+		System.out.println(s);
+		if (null == s) {
+			System.err.println("Record not found.......");
+		}
+		//em.
+		System.out.println("ROll:"+s.getStudentRoll());	
+		return s.getStudentRoll();
+		//em.refresh(s);
+		//em.clear();
+		//emf.close();
 	}
-
 }

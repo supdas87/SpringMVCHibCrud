@@ -2,6 +2,8 @@ package com.sup.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,9 +12,13 @@ import javax.persistence.Table;
 public class Student {
 	
 	@Id
-	//@Column(name="studentId")
+	@Column(name = "studentId")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int studentId;
+	
 	private String studentName;
+	
+	@Column(name = "studentRoll")
 	private String studentRoll;
 	
 	public Student() {

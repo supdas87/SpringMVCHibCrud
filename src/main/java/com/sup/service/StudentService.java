@@ -5,6 +5,6 @@ import com.sup.model.Student;
 public interface StudentService {
 	
 	public void saveStudent(Student student);
-	public void getStudentById(int id);
+	public String getStudentById(int id);
 
 }

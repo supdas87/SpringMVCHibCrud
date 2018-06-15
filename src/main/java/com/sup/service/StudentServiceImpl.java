@@ -21,9 +21,10 @@ public class StudentServiceImpl implements StudentService{
 	}
 
 	@Transactional
-	public void getStudentById(int id) {
+	public String getStudentById(int id) {
 		System.out.println("In Service Impl");
-		studentDao.getStudentById(id);
+		String studentROll = studentDao.getStudentById(id);
+		return studentROll;
 	}
 
 }
