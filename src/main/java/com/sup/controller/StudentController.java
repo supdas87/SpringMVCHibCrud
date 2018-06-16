@@ -11,8 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.sup.service.StudentService;
 
+
 @Controller
-//@RequestMapping("/SpringMVCHibernateCrud")
 public class StudentController {
 	
 	@Autowired
@@ -21,13 +21,8 @@ public class StudentController {
 	@RequestMapping("/saveStduentGet")
 	public void saveStudentRecord(ServletRequest req, ServletResponse resp) {
 		System.out.println("Saving student record...");
-		//int id = Integer.parseInt(req.getParameter("id"));
-		//studentService.saveStudent(student);
-		
 	}
-	//value="/method2", method=RequestMethod.POST
 	@RequestMapping(value="/getStudentById", method=RequestMethod.GET)
-	//@RequestMapping("/getStudentById")
 	public ModelAndView getStudentById(ServletRequest req, ServletResponse resp) {
 		System.out.println("In controller..");
 		int id = Integer.parseInt(req.getParameter("id"));
@@ -38,8 +33,5 @@ public class StudentController {
 		mv.addObject("studentRoll", studentRoll);
 		System.out.println("Controller::"+studentRoll);
 		return mv;
-		
-		
 	}
-
 }
